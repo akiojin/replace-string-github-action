@@ -1,0 +1,26 @@
+name: 'clean-workspace-github-action'
+description: 'This action cleans the workspace.'
+inputs:
+  source:
+    description: 'The text you want to run this action on'
+    required: true
+  find:
+    description: 'The text you are looking for'
+    required: true
+  replace:
+    description: 'The text you want to replace with'
+    required: true
+  all:
+    description: 'replaceAll or replace'
+    required: false
+    default: true
+outputs:
+  value:
+    description: 'The new value after replace-string has been run'
+runs:
+  using: 'node16'
+  main: 'dist/index.js'
+  post: 'dist/index.js'
+branding:
+  icon: "box"
+  color: "orange"
