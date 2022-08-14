@@ -1,18 +1,22 @@
 # replace-string-github-action
+
 ![Test][0]
 
-This action cleans up the workspace when the workflow is finished.
-
-This action executes the following commands
-
-```sh
-rm -rf ${{ github.workspace }}/*
-```
+This action replaces and returns the specified string.
 
 ## Usage
+
 ```yml
-- name: Cleanup workspace
-  uses: akiojin/clean-workspace-github-action@v1
+- name: Replace string
+  uses: akiojin/replace-string-github-action@v0.1.0
+  id: replace-string
+  with:
+    source: This is a pen
+    find: pen
+    replace: pencil
+    all: true
+
+steps.replace-string.outputs.value
 ```
 
 ## License
