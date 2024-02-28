@@ -18,7 +18,7 @@ outputs:
   value:
     description: 'The new value after replace-string has been run'
 runs:
-  using: 'node16'
+  using: 'node20'
   main: 'dist/index.js'
   post: 'dist/index.js'
 branding:
