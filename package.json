@@ -1,6 +1,6 @@
 {
   "name": "replace-string-github-action",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "This action replaces and returns the specified string.",
   "main": "dist/index.js",
   "scripts": {
